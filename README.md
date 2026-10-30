@@ -67,43 +67,7 @@ Layer responsibilities
 Sector memory and redeployment
 A sector's stored hazard layout is used to reproduce the same environment during a later deployment. The robot does not receive the complete hidden layout as prior knowledge. It inherits only evidence established by the previous unit, such as confirmed safe cells, confirmed hazards, and the location where a unit was lost. This keeps the robot's reasoning separate from the environment's ground truth.
 
-When a sector has no previous destroyed-unit record, the application can initialize a new environment. When such a record exists, it can reload the stored sector layout.
-Project Structure
-rescuebot-command/
-├── src/
-│   ├── components/
-│   │   ├── grid/
-│   │   │   └── TacticalGrid.tsx
-│   │   ├── hud/
-│   │   │   ├── ReasoningLog.tsx
-│   │   │   └── TelemetryPanel.tsx
-│   │   └── ui/
-│   ├── pages/
-│   │   ├── AILogicLabPage.tsx
-│   │   ├── AuthPage.tsx
-│   │   ├── FleetCenterPage.tsx
-│   │   ├── IncidentLogsPage.tsx
-│   │   └── MissionControlPage.tsx
-│   ├── simulation/
-│   │   ├── logic.ts
-│   │   └── sectorMemory.ts
-│   ├── storage/
-│   │   ├── missionStore.ts
-│   │   └── stateStore.ts
-│   ├── App.tsx
-│   ├── index.css
-│   ├── main.tsx
-│   └── types.ts
-├── index.html
-├── package.json
-├── package-lock.json
-├── tsconfig.json
-├── vite.config.ts
-└── README.md
-Getting Started
-Prerequisites
-- Node.js
-- npm
+
 Installation
 1. Clone the repository:
    git clone <repository-url>
@@ -134,5 +98,3 @@ Limitations
 - localStorage does not provide multi-user synchronization or centralized data management.
 - The reasoning engine is deterministic and rule-based; it is not a trained AI model.
 - The inference strategy is sound but not complete, so it may leave some hazards unresolved.
-License
-Add a license here before distributing the project publicly.
