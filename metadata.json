@@ -1,0 +1,6 @@
+{
+  "name": "RescueBot Command",
+  "description": "Tactical disaster-response simulation platform for classical AI logic, search, and planning without machine learning.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
